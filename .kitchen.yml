@@ -7,7 +7,11 @@ platforms:
     box: precise64
     box_url: http://files.vagrantup.com/precise64.box
     require_chef_omnibus: true
+  run_list:
+    - recipe[apt]
 
 suites:
 - name: default
-  run_list: ["recipe[logmetrics]"]
+  run_list:
+    - recipe[minitest-handler]
+    - recipe[logmetrics_test]

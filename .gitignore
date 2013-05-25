@@ -1,4 +1,6 @@
 .vagrant
+.kitchen
 Berksfile.lock
 Gemfile.lock
 *.sublime-workspace
+
