@@ -24,3 +24,4 @@ end
 attribute :log_file, :kind_of => String, :name_attribute => true
 attribute :target, :kind_of => String
 attribute :parser, :kind_of => String
+attribute :options, :kind_of => Hash
