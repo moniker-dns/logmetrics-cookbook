@@ -22,6 +22,7 @@ def initialize(*args)
 end
 
 attribute :log_file, :kind_of => String, :name_attribute => true
+attribute :command, :kind_of => String, :default => "/usr/bin/logmetrics"
 attribute :target, :kind_of => String
 attribute :parser, :kind_of => String
 attribute :options, :kind_of => Hash

@@ -22,6 +22,7 @@ action :add do
   clean_name = new_resource.log_file.gsub(/\//, '_')
   target = new_resource.target
   parser = new_resource.parser
+  command = new_resource.command
 
   options = new_resource.options
   options_string = ""
@@ -30,10 +31,8 @@ action :add do
     options_string += " --#{key} #{value}"
   end
 
-
-
   cron "logmetrics-#{clean_name}-#{target}-#{parser}" do
-    command "/usr/bin/logmetrics #{target} #{parser} #{new_resource.log_file} #{options_string}"
+    command "#{command} #{target} #{parser} #{new_resource.log_file} #{options_string}"
     action :create
   end
 end
