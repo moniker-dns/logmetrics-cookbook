@@ -17,4 +17,6 @@
 include_recipe "logmetrics::repository"
 
 # Install the logmetrics package
-package "logmetrics"
+package "logmetrics" do
+  action  :upgrade
+end
